@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# full-length original downloads (re-downloadable, see references/real/SOURCES.md); segments are kept
+references/real/**/*.webm
+references/real/**/*.ogv
+references/real/fez/
+# build output of the Unity compile check
+tools/unity_compile_check/bin/
+tools/unity_compile_check/obj/
+exports/

@@ -1,0 +1,69 @@
+{
+ "case": "smc",
+ "chosen": "B",
+ "confidence": "HIGH",
+ "reasons": [
+  "'ground_decel' not fitted: tied to acceleration: no clip shows a stop.",
+  "Clips do not contain enough information to distinguish constant gravity from asymmetric gravity (B chosen; C fits similarly)."
+ ],
+ "explanation": [
+  "  A: constant gravity, instant speed: trajectory 14.5%, 3 params, score -99",
+  "\u2192 B: + ground accel/decel: trajectory 2.9%, 4 params, score -206",
+  "  C: + asymmetric gravity: trajectory 2.9%, 5 params, score -217",
+  "  D: + jump cut, air control: trajectory 2.9%, 6 params, score -212",
+  "  D2: + held-jump gravity, air control: trajectory 2.9%, 6 params, score -212",
+  "  E: D + apex gravity, terminal velocity, turn accel: trajectory 2.8%, 7 params, score -207",
+  "Simpler model A is rejected: error 14.5% vs 2.9% \u2013 the extra parameters are needed to explain the clips.",
+  "More complex model C is not justified: error 2.9% (vs 2.9%) does not improve enough for its extra parameters."
+ ],
+ "params": {
+  "max_speed": 6.009651202570999,
+  "ground_accel": 5.697715593608323,
+  "ground_decel": 5.697715593608323,
+  "turn_accel": 5.697715593608323,
+  "jump_velocity": 15.40238005246768,
+  "rise_gravity": 33.38542327756909,
+  "fall_gravity": 33.38542327756909,
+  "jump_cut": 1.0,
+  "release_gravity_mult": 1.0,
+  "apex_gravity_mult": 1.0,
+  "apex_threshold": 0.0,
+  "max_fall_speed": null,
+  "air_control": 1.0
+ },
+ "clips": {
+  "smc_seg01 8-58: walk off pipe, run, high jump": {
+   "values": {
+    "trajectory": 0.03335012875477567,
+    "velocity": 0.38489941188837584,
+    "apex_timing": 0.034090909090909186,
+    "landing_timing": null,
+    "max_height": 0.08792361626288932,
+    "horizontal": 0.007028057514706599
+   },
+   "overall": 0.10945842470233132
+  },
+  "smc_seg01 30-80: run, two jumps, land on pipe": {
+   "values": {
+    "trajectory": 0.02549067175371123,
+    "velocity": 0.1461180013535578,
+    "apex_timing": 0.0047152617608413544,
+    "landing_timing": 0.0021551724137930956,
+    "max_height": 0.06692589495344062,
+    "horizontal": 0.04098167676265743
+   },
+   "overall": 0.047731113166333584
+  }
+ },
+ "overall": {
+  "values": {
+   "trajectory": 0.029420400254243452,
+   "velocity": 0.2655087066209668,
+   "apex_timing": 0.01940308542587527,
+   "landing_timing": 0.0021551724137930956,
+   "max_height": 0.07742475560816497,
+   "horizontal": 0.024004867138682016
+  },
+  "overall": 0.06965283124362094
+ }
+}

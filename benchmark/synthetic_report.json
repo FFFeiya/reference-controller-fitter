@@ -1,0 +1,192 @@
+{
+ "chosen": "D",
+ "confidence": "HIGH",
+ "reasons": [
+  "Model D2 (Variable jump height via stronger rise gravity once jump is released (Mario-style).) explains the clips about as well (0.2% vs 0.2%): the clips do not determine which mechanism the original game uses. Add clips with short and long jumps to decide."
+ ],
+ "explanation": [
+  "  A: constant gravity, instant speed: trajectory 5.7%, 3 params, score -279",
+  "  B: + ground accel/decel: trajectory 3.4%, 5 params, score -826",
+  "  C: + asymmetric gravity: trajectory 3.4%, 6 params, score -813",
+  "\u2192 D: + jump cut, air control: trajectory 0.2%, 8 params, score -16743",
+  "  D2: + held-jump gravity, air control: trajectory 0.2%, 8 params, score -15147",
+  "  E: D + apex gravity, terminal velocity, turn accel: trajectory 0.2%, 10 params, score -16581",
+  "Simpler model B is rejected: error 3.4% vs 0.2% \u2013 the extra parameters are needed to explain the clips.",
+  "More complex model E is not justified: error 0.2% (vs 0.2%) does not improve enough for its extra parameters."
+ ],
+ "seconds_tracking": 50.67103624343872,
+ "seconds_fitting": 53.38594603538513,
+ "models": {
+  "A": {
+   "trajectory": 0.05684641754339797,
+   "overall": 0.07361578987782046,
+   "k": 3,
+   "score": -278.6712617064562,
+   "seconds": 5.75856614112854
+  },
+  "B": {
+   "trajectory": 0.03411457402622371,
+   "overall": 0.05748402543256064,
+   "k": 5,
+   "score": -826.4881422866749,
+   "seconds": 3.7537472248077393
+  },
+  "C": {
+   "trajectory": 0.03408575145462244,
+   "overall": 0.05690186142986569,
+   "k": 6,
+   "score": -813.2989583671592,
+   "seconds": 4.03982949256897
+  },
+  "D": {
+   "trajectory": 0.001969111647701622,
+   "overall": 0.015877844467334257,
+   "k": 8,
+   "score": -16742.825486850143,
+   "seconds": 11.900178670883179
+  },
+  "D2": {
+   "trajectory": 0.002497947375416853,
+   "overall": 0.016876075395419823,
+   "k": 8,
+   "score": -15146.952994249415,
+   "seconds": 6.635173559188843
+  },
+  "E": {
+   "trajectory": 0.0019599262872110257,
+   "overall": 0.016092136986171592,
+   "k": 10,
+   "score": -16580.882562003768,
+   "seconds": 13.15734577178955
+  }
+ },
+ "clips": {
+  "long_jump": {
+   "trajectory": 0.004126594052603526,
+   "velocity": 0.0061379447133101065,
+   "apex_timing": 0.006774882892867077,
+   "landing_timing": 0.04742418025006972,
+   "max_height": 0.003737092781109243,
+   "horizontal": 0.0015879457250447765
+  },
+  "short_jump": {
+   "trajectory": 0.0036832523071580804,
+   "velocity": 0.0061048710457674025,
+   "apex_timing": 0.05377171391091942,
+   "landing_timing": 0.06273366622940596,
+   "max_height": 0.0005821721104046569,
+   "horizontal": 0.0014196482167191302
+  },
+  "medium_jump": {
+   "trajectory": 0.0031404021072220173,
+   "velocity": 0.00427447504228641,
+   "apex_timing": 0.03688005623460391,
+   "landing_timing": 0.07376011246920781,
+   "max_height": 0.00015387600520894124,
+   "horizontal": 0.0014678551087165838
+  },
+  "running_jump": {
+   "trajectory": 0.0005436294074047303,
+   "velocity": 0.004089901205925308,
+   "apex_timing": 0.006755614917536048,
+   "landing_timing": 0.0472893044227527,
+   "max_height": 0.0024100174188616584,
+   "horizontal": 0.00010520244690084379
+  },
+  "run_stop": {
+   "trajectory": 0.0004585891458984673,
+   "velocity": 0.003495923461659692,
+   "apex_timing": null,
+   "landing_timing": null,
+   "max_height": null,
+   "horizontal": 4.967668448997952e-06
+  },
+  "turn": {
+   "trajectory": 0.0007540969615926391,
+   "velocity": 0.005385721713825291,
+   "apex_timing": null,
+   "landing_timing": null,
+   "max_height": null,
+   "horizontal": 0.00014511415197257974
+  },
+  "air_turn": {
+   "trajectory": 0.0010772175520318934,
+   "velocity": 0.005135671295530832,
+   "apex_timing": 0.047308222820730446,
+   "landing_timing": 0.04730822282073081,
+   "max_height": 0.0013941761533334037,
+   "horizontal": 0.00013380828518087858
+  }
+ },
+ "behaviour": {
+  "long_jump": 0.002093031965478394,
+  "short_jump": 0.002735598692674615,
+  "medium_jump": 0.0033217131160220036,
+  "running_jump": 0.0005266569387926628,
+  "run_stop": 0.0007431312254549252,
+  "turn": 0.004389970736008405,
+  "air_turn": 0.004037449220924028
+ },
+ "generalization": {
+  "hold_0.3s_jump": 0.0035483243547678894,
+  "run_left_jump_back": 0.006092939026896007,
+  "tap_tap_tap": 0.004693635626083574
+ },
+ "params": {
+  "max_speed": {
+   "fitted": 7.999302940638057,
+   "truth": 8.0,
+   "rel_error": 8.71324202428303e-05
+  },
+  "ground_accel": {
+   "fitted": 39.7108893023819,
+   "truth": 40.0,
+   "rel_error": 0.007227767440452481
+  },
+  "ground_decel": {
+   "fitted": 53.17165470184537,
+   "truth": 55.0,
+   "rel_error": 0.03324264178462964
+  },
+  "jump_velocity": {
+   "fitted": 12.127381202471263,
+   "truth": 12.0,
+   "rel_error": 0.010615100205938552
+  },
+  "rise_gravity": {
+   "fitted": 38.65010618322198,
+   "truth": 38.0,
+   "rel_error": 0.017108057453209972
+  },
+  "fall_gravity": {
+   "fitted": 51.240281047633125,
+   "truth": 52.0,
+   "rel_error": 0.014609979853209127
+  },
+  "jump_cut": {
+   "fitted": 0.446717216288031,
+   "truth": 0.45,
+   "rel_error": 0.007295074915486656
+  },
+  "air_control": {
+   "fitted": 0.5763029562278965,
+   "truth": 0.55,
+   "rel_error": 0.047823556777993576
+  }
+ },
+ "fitted_params": {
+  "max_speed": 7.999302940638057,
+  "ground_accel": 39.7108893023819,
+  "ground_decel": 53.17165470184537,
+  "turn_accel": 53.17165470184537,
+  "jump_velocity": 12.127381202471263,
+  "rise_gravity": 38.65010618322198,
+  "fall_gravity": 51.240281047633125,
+  "jump_cut": 0.446717216288031,
+  "release_gravity_mult": 1.0,
+  "apex_gravity_mult": 1.0,
+  "apex_threshold": 0.0,
+  "max_fall_speed": null,
+  "air_control": 0.5763029562278965
+ }
+}

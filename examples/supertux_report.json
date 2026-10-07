@@ -1,0 +1,93 @@
+{
+ "case": "supertux",
+ "chosen": "D",
+ "confidence": "MEDIUM",
+ "reasons": [
+  "'ground_decel' is poorly constrained by the clips (\u00b163%).",
+  "'jump_cut' is poorly constrained by the clips (\u00b11099%).",
+  "'air_control' is poorly constrained by the clips (\u00b143%).",
+  "Model D2 (Variable jump height via stronger rise gravity once jump is released (Mario-style).) explains the clips about as well (2.0% vs 2.0%): the clips do not determine which mechanism the original game uses. Add clips with short and long jumps to decide."
+ ],
+ "explanation": [
+  "  A: constant gravity, instant speed: trajectory 9.1%, 3 params, score -43",
+  "  B: + ground accel/decel: trajectory 8.3%, 5 params, score -158",
+  "  C: + asymmetric gravity: trajectory 9.6%, 6 params, score -32",
+  "\u2192 D: + jump cut, air control: trajectory 2.0%, 8 params, score -1060",
+  "  D2: + held-jump gravity, air control: trajectory 2.0%, 8 params, score -1029",
+  "  E: D + apex gravity, terminal velocity, turn accel: trajectory 2.7%, 11 params, score -161",
+  "Simpler model B is rejected: error 8.3% vs 2.0% \u2013 the extra parameters are needed to explain the clips.",
+  "More complex model E is not justified: error 2.7% (vs 2.0%) does not improve enough for its extra parameters."
+ ],
+ "params": {
+  "max_speed": 7.533713500555139,
+  "ground_accel": 12.825566836384523,
+  "ground_decel": 46.339762547514944,
+  "turn_accel": 46.339762547514944,
+  "jump_velocity": 15.670074355342908,
+  "rise_gravity": 27.466229573981245,
+  "fall_gravity": 23.28376413154262,
+  "jump_cut": 0.020003019473430278,
+  "release_gravity_mult": 1.0,
+  "apex_gravity_mult": 1.0,
+  "apex_threshold": 0.0,
+  "max_fall_speed": null,
+  "air_control": 0.2532561050575848
+ },
+ "clips": {
+  "supertux_l1_seg01 0-100: run + running jump": {
+   "values": {
+    "trajectory": 0.015631208627442526,
+    "velocity": 0.09644972671177764,
+    "apex_timing": 0.03770805652869813,
+    "landing_timing": 0.05446719276367498,
+    "max_height": 0.00931255445161807,
+    "horizontal": 0.006506913772442975
+   },
+   "overall": 0.03667927547594239
+  },
+  "supertux_l1_seg02 25-100: jump off bridge, drop two levels": {
+   "values": {
+    "trajectory": 0.014224157553128714,
+    "velocity": 0.07628434059940538,
+    "apex_timing": 0.01687279014827606,
+    "landing_timing": 0.10686100427241502,
+    "max_height": 0.03474820057913043,
+    "horizontal": 0.03752880544999024
+   },
+   "overall": 0.0477532164337243
+  },
+  "supertux_l1_seg02 158-200: jump onto step, stop": {
+   "values": {
+    "trajectory": 0.019493979283649862,
+    "velocity": 0.08550650061510356,
+    "apex_timing": 0.24317777271091096,
+    "landing_timing": 0.37345157952032754,
+    "max_height": 0.06753970316631339,
+    "horizontal": 0.0015672945377016786
+   },
+   "overall": 0.13178947163900115
+  },
+  "supertux_ff_seg01 136-172: running jump": {
+   "values": {
+    "trajectory": 0.031147208847611175,
+    "velocity": 0.3466028433815848,
+    "apex_timing": 0.05168835159418583,
+    "landing_timing": null,
+    "max_height": 0.022399848525182054,
+    "horizontal": 0.0076940930130980755
+   },
+   "overall": 0.0919064690723324
+  }
+ },
+ "overall": {
+  "values": {
+   "trajectory": 0.02012413857795807,
+   "velocity": 0.15121085282696783,
+   "apex_timing": 0.08736174274551775,
+   "landing_timing": 0.17825992551880585,
+   "max_height": 0.033500076680560986,
+   "horizontal": 0.013324276693308242
+  },
+  "overall": 0.08063016884051981
+ }
+}
